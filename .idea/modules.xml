@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Applied_programming_univer.iml" filepath="$PROJECT_DIR$/.idea/Applied_programming_univer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab1_Nazarkevych_RI21/Lab1_Nazarkevych_RI21.iml" filepath="$PROJECT_DIR$/Lab1_Nazarkevych_RI21/Lab1_Nazarkevych_RI21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab2_Nazarkevych_RI21/Lab2_Nazarkevych_RI21.iml" filepath="$PROJECT_DIR$/Lab2_Nazarkevych_RI21/Lab2_Nazarkevych_RI21.iml" />
+    </modules>
+  </component>
+</project>
