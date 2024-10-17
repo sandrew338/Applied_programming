@@ -7,11 +7,15 @@ public class OrientedGraph extends Graph {
      */
     @Override
     public void addEdge(Node nodeFrom, Node nodeTo) throws Exception {
-        if (!edges.containsKey(nodeFrom)) {
+        if (!nodes.containsKey(nodeFrom)) {
             throw new Exception("Graph doesn't contain node " + nodeFrom);
-        } else if (edges.get(nodeFrom).contains(nodeTo)) {
+        }
+        if(!nodes.containsKey(nodeTo)){
+            throw new Exception("Graph doesn't contain node " + nodeTo);
+        }
+        if (nodes.get(nodeFrom).contains(nodeTo)) {
             throw new Exception("Graph already contains edge with node from " + nodeFrom + "to " + nodeTo);
         }
-        edges.get(nodeFrom).add(nodeTo);
+        nodes.get(nodeFrom).add(nodeTo);
     }
 }

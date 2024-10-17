@@ -15,6 +15,11 @@ public class Rectangle implements FlatFigure {
         this.width = width;
     }
 
+    public Rectangle(Square square) {
+        this.height = square.getSide();
+        this.width = square.getSide();
+    }
+
     @Override
     public double getSquare() {
         return width * height;

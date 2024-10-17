@@ -7,7 +7,11 @@ public class Circle implements FlatFigure {
     private final double radius;
     @Override
     public double getSquare() {
-        return Math.PI * Math.pow(Math.PI, 2) / 2;
+        return Math.PI * Math.pow(radius, 2);
+    }
+
+    public double getRadius() {
+        return radius;
     }
 
     public Circle(double radius) {

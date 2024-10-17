@@ -14,6 +14,10 @@ public class Square implements FlatFigure {
         this.side = side;
     }
 
+    public double getSide() {
+        return side;
+    }
+
     @Override
     public double getSquare() {
         return side * side;

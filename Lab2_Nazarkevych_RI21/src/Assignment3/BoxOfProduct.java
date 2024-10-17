@@ -1,6 +1,8 @@
 package Assignment3;
 
 public class BoxOfProduct {
+
+    private Product product;
     private final double height;
     private final double width;
     private final double depth;
@@ -9,13 +11,9 @@ public class BoxOfProduct {
         return product;
     }
 
-    public void setProduct(Product product) {
+
+    public BoxOfProduct(Product product, double depth, double height, double width) {
         this.product = product;
-    }
-
-    private Product product;
-
-    public BoxOfProduct(double depth, double height, double width) {
         this.depth = depth;
         this.height = height;
         this.width = width;
@@ -41,4 +39,14 @@ public class BoxOfProduct {
                 ", width=" + width +
                 '}';
     }
+    public void sendToContainer(ContainerOfProducts container) {
+        if (!fitsInBox()) {
+            throw new IllegalArgumentException("Product with the name " + product.getName() + " doesn't fit in the box.");
+        }
+        container.addBox(this);
+    }
+    public boolean fitsInBox() {
+        return product.getHeight() <= this.height && product.getWidth() <= this.width && product.getDepth() <= this.depth;
+    }
+
 }

@@ -1,6 +1,7 @@
 package Assignment2.figures.voluminous;
 
 import Assignment2.addFunctions.Rounding;
+import Assignment2.figures.flat.Circle;
 import Assignment2.interfaces.VoluminousFigure;
 
 public class Sphere implements VoluminousFigure {
@@ -11,6 +12,10 @@ public class Sphere implements VoluminousFigure {
             throw new IllegalArgumentException("Side of a sphere must be greater than 0");
         }
         this.radius = radius;
+    }
+
+    public Sphere(Circle circle) {
+        this.radius = circle.getRadius();
     }
 
     @Override
@@ -30,6 +35,5 @@ public class Sphere implements VoluminousFigure {
                 " cm^2 and volume " + Rounding.roundNumber(getVolume()) + " cm^3" );
 
     }
-
 
 }
