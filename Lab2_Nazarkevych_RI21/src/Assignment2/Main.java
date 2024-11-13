@@ -30,7 +30,7 @@ public class Main {
             rectangle = new Rectangle(square);
             circe = new Circle(SIDE1); // SIDE1 instead of radius
             cube = new Cube(square); // SIDE1 or square result will be the same
-            sphere = new Sphere(circe); // SIDE1 instead of radius
+            sphere = new Sphere(circe);
             pyramid = new Pyramid(SIDE1, SIDE2, SIDE3, SIDE4);
         } catch (Exception e) {
             throw new RuntimeException(e);

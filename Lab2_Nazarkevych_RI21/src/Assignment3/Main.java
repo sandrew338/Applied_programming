@@ -30,7 +30,7 @@ public class Main {
         }
 
         try {
-            box3.sendToContainer(container2);
+            box3.sendToContainer(container1);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -4,29 +4,25 @@ import Assignment2.addFunctions.Rounding;
 import Assignment2.figures.flat.Circle;
 import Assignment2.interfaces.VoluminousFigure;
 
-public class Sphere implements VoluminousFigure {
-    private final double radius;
-
-    public Sphere(double radius) {
-        if (radius <= 0) {
-            throw new IllegalArgumentException("Side of a sphere must be greater than 0");
-        }
-        this.radius = radius;
-    }
+public class Sphere extends Circle implements VoluminousFigure {
 
     public Sphere(Circle circle) {
-        this.radius = circle.getRadius();
+        super(circle.getRadius());
+    }
+
+    public Sphere(Sphere sphere) {
+        super(sphere.getRadius());
     }
 
     @Override
         public double getSurfaceArea() {
-        return 4 * Math.PI * Math.pow(radius, 2);
+        return 4 * getSquare();
 
     }
 
     @Override
     public double getVolume() {
-        return (Math.PI * Math.pow(radius, 3))/4;
+        return 4 * (Math.PI * Math.pow(getRadius(), 3))/3;
     }
 
     @Override

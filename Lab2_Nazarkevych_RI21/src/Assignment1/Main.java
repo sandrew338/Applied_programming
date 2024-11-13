@@ -21,9 +21,9 @@ public class Main {
             graph.addNode(node2);
             graph.addNode(node3);
 
-            graph.addEdge(node1, node2);
-            graph.addEdge(node3, node1);
-            graph.addEdge(node3, node2);
+            graph.addEdge(node1, node1);
+            //graph.addEdge(node3, node1);
+            //graph.addEdge(node3, node2);
             System.out.println(graph.nodes.keySet());
 
         }

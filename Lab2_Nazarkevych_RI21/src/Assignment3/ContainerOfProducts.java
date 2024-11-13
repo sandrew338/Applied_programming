@@ -1,10 +1,11 @@
 package Assignment3;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ContainerOfProducts {
     private static final int MAX_CAPACITY = 5;
-    private ArrayList<BoxOfProduct> products = new ArrayList<BoxOfProduct>(MAX_CAPACITY);
+    private List<BoxOfProduct> products = new ArrayList<BoxOfProduct>(MAX_CAPACITY);
 
     public ContainerOfProducts() {
         this.products = new ArrayList<BoxOfProduct>();
@@ -17,7 +18,7 @@ public class ContainerOfProducts {
         products.add(box);
     }
 
-    public ArrayList<BoxOfProduct> getProducts() {
+    public List<BoxOfProduct> getProducts() {
         return products;
     }
 
