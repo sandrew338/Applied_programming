@@ -2,13 +2,13 @@ import java.time.LocalDate;
 
 class Booking {
     private Cottage cottage;
-    private String client;
+    private String user;
     private LocalDate startDate;
     private LocalDate endDate;
 
     public Booking(Cottage cottage, String client, LocalDate startDate, LocalDate endDate) {
         this.cottage = cottage;
-        this.client = client;
+        this.user = client;
         this.startDate = startDate;
         this.endDate = endDate;
     }
@@ -27,6 +27,6 @@ class Booking {
 
     @Override
     public String toString() {
-        return "Booking: " + client + " from " + startDate + " to " + endDate;
+        return "Booking: " + user + " from " + startDate + " to " + endDate;
     }
 }

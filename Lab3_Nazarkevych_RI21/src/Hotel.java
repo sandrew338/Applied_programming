@@ -31,11 +31,12 @@ class Hotel {
 
     public List<Facility> getAmenitiesInfo(Cottage cottage) {
         List<Facility> allFacilities = new ArrayList<>(cottage.getFacilities());
-        allFacilities.addAll(hotelFacilities);
+        //allFacilities.addAll(hotelFacilities);
         return allFacilities;
     }
 
     public double calculateRevenueAndExpenses() {
+
         expenses = hotelFacilities.stream().mapToDouble(Facility::getCost).sum()
                 + cottages.stream()
                 .flatMap(c -> c.getFacilities().stream())
@@ -70,4 +71,6 @@ class Hotel {
     public double getProfit() {
         return income - expenses;
     }
+
 }
+
